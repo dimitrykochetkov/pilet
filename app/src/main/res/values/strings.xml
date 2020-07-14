@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Ühiskaart balance</string>
+    <string name="get_balance">GET BALANCE</string>
+    <string name="eur">EUR</string>
+    <string name="permission_needed">To scan card code please grant camera permission</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="tere">Tere!</string>
+    <string name="grant_permission">GRANT PERMISSION</string>
+    <string name="unable_use">The application is unable to use without camera permission</string>
+    <string name="card_number">Card Number</string>
+    <string name="learn">Just scan your card barcode or type number in input space above</string>
+    <string name="catching_balance">Catching your balance!</string>
+    <string name="incorrect_card_number">Error. Incorrect card number.</string>
+    <string name="verify_card">Please verify which card do you scan.</string>
+    <string name="server_unavailable">Error. Server unavailable.</string>
+    <string name="try_later">Please try later.</string>
+    <string name="timeout">Error. Request Timeout.</string>
+    <string name="check_connection">Please, check your internet connection.</string>
+    <string name="unknown_error">Unknown error!</string>
+    <string name="sorry_not_sorry">Sorry, we don’t know what’s up. Please, help us to fix it.</string>
+    <string name="send_logs">SEND LOGS</string>
+    <string name="logs_sent">SUCCESS. THANK YOU!</string>
+    <string name="disclaimer_title">Disclaimer</string>
+    <string name="disclaimer">Please note that this app is not official. \n We are not responsible
+        for API’s errors and have no connection with official transport system developers. \n
+        We only provide you another way to check the card balance based on public data.</string>
+    <string name="ok_got_it">OK, GOT IT</string>
+
+    <string name="prefs_key">FIRST_RUN</string>
+</resources>
