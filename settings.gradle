@@ -1,0 +1,2 @@
+rootProject.name='Harjumaa Transport Card Balance'
+include ':app'
