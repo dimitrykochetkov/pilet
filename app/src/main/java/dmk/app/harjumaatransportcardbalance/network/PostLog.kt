@@ -48,7 +48,7 @@ class PostLog {
 
         val queue = Volley.newRequestQueue(context, object : HurlStack() {
             @Throws(IOException::class)
-            override fun createConnection(url: URL?): HttpURLConnection? {
+            override fun createConnection(url: URL?): HttpURLConnection {
                 val connection: HttpURLConnection = super.createConnection(url)
                 connection.instanceFollowRedirects = false
                 return connection

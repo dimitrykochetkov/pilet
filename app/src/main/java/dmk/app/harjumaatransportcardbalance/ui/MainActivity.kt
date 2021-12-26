@@ -182,10 +182,21 @@ class MainActivity : BaseActivity(), ResponseCallback {
                 view.findViewById<TextView>(R.id.tvGuide).setText(R.string.catching_balance)
             }
             ContainerState.SUCCESS -> {
-                val view: View = layoutInflater.inflate(R.layout.layout_balance, layoutContainer,
-                    true)
-                view.findViewById<TextView>(R.id.tvBalanceResult).text = String.format("%s €",
-                    data[0])
+                val balance = data[0]
+                if (balance.contains("|")) {
+                    val view: View = layoutInflater.inflate(R.layout.layout_pass, layoutContainer,
+                        true)
+                    view.findViewById<TextView>(R.id.tvPassStart).text =
+                        balance.substring(0, balance.indexOf("|"))
+                    view.findViewById<TextView>(R.id.tvPassEnd).text =
+                        balance.substring(balance.indexOf("|") + 1)
+                } else {
+                    val view: View = layoutInflater.inflate(R.layout.layout_balance, layoutContainer,
+                        true)
+                    view.findViewById<TextView>(R.id.tvBalanceResult).text = String.format(
+                        "%s €", balance)
+                }
+
                 tvUnderline.setBackgroundColor(ContextCompat.getColor(this@MainActivity,
                     R.color.colorGreen))
             }

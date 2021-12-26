@@ -6,7 +6,7 @@ import com.android.volley.toolbox.HurlStack
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import dmk.app.harjumaatransportcardbalance.R
-import org.json.JSONArray
+import dmk.app.harjumaatransportcardbalance.utils.ResponseUtil
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
@@ -69,7 +69,7 @@ class PostCardBalance {
 
             val queue = Volley.newRequestQueue(context, object : HurlStack() {
                 @Throws(IOException::class)
-                override fun createConnection(url: URL?): HttpURLConnection? {
+                override fun createConnection(url: URL?): HttpURLConnection {
                     val connection: HttpURLConnection = super.createConnection(url)
                     connection.instanceFollowRedirects = false
                     return connection
@@ -91,10 +91,7 @@ class PostCardBalance {
 
             when (balance.getInt("status_code")) {
                 200 -> {
-                    val content: JSONArray = balance.getJSONArray("content")
-                    val contentObject: JSONObject = content.optJSONObject(0)
-
-                    callback.onSuccess(contentObject.optString("balance"))
+                    callback.onSuccess(ResponseUtil.parseResp(response))
                 }
 
                 409, 422 -> callbackError(callback, Error.INCORRECT_CARD_NUMBER)

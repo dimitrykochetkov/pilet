@@ -10,6 +10,8 @@
     <string name="card_number">Card Number</string>
     <string name="learn">Just scan your card barcode or type number in input space above</string>
     <string name="catching_balance">Catching your balance!</string>
+    <string name="valid_from">valid from: </string>
+    <string name="valid_to">valid to: </string>
     <string name="incorrect_card_number">Error. Incorrect card number.</string>
     <string name="verify_card">Please verify which card do you scan.</string>
     <string name="server_unavailable">Error. Server unavailable.</string>
@@ -27,4 +29,5 @@
     <string name="ok_got_it">OK, GOT IT</string>
 
     <string name="prefs_key">FIRST_RUN</string>
+    <string name="empty_string"> </string>
 </resources>
